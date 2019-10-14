@@ -34,3 +34,23 @@ Example code for the book `Fluent Python`_ by Luciano Ramalho (O'Reilly, 2014).
   >>> quotient, remainder = divmod(*t) 
   >>> quotient, remainder 
   (2, 4)
+5.序列支持切片操作，支持切片赋值操作，切片赋值操作的右值必须是一个可以迭代的对象，序列操作的+、*操作符都会产生一个新的序列对象， += 、*= 操作才会
+就地返回。
+  >>> l = list(range(10)) 
+  >>> l 
+  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] 
+  >>> l[2:5] = [20, 30] 
+  >>> l 
+  [0, 1, 20, 30, 5, 6, 7, 8, 9] 
+  >>> del l[5:7] 
+  >>> l 
+  [0, 1, 20, 30, 5, 8, 9] 
+  >>> 
+  l[3::2] = [11, 22] 
+  >>> l 
+  [0, 1, 20, 11, 5, 22, 9] 
+  >>> l[2:5] = 100  ➊ 
+  Traceback (most recent call last):  File "<stdin>", line 1, in <module> TypeError: can only assign an iterable 
+  >>> l[2:5] = [100] 
+  >>> l 
+  [0, 1, 100, 22, 9]
