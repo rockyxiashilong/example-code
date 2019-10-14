@@ -25,7 +25,7 @@ Example code for the book `Fluent Python`_ by Luciano Ramalho (O'Reilly, 2014).
 
 3.列表按数据是否连续存放可以分成扁平化列表和非扁平化列表，例如list、tuple都是非扁平化列表，str和byte都是扁平化列表；依据是否支持__setitem__,可以分成可变列表（list、dict）和不可变（tuple、str）
 
-4.还可以用 * 运算符把一个可迭代对象拆开作为函数的参数：
+4.还可以用 * 运算符把一个可迭代对象拆开作为函数的参数page64+：
   >>> divmod(20, 8) 
   (2, 4) 
   >>> t = (20, 8) 
