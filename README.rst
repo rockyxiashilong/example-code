@@ -54,3 +54,5 @@ Example code for the book `Fluent Python`_ by Luciano Ramalho (O'Reilly, 2014).
   >>> l[2:5] = [100] 
   >>> l 
   [0, 1, 100, 22, 9]
+  
+  6.如果一个函数或者方法对对象进行的是就地改动，那它就应该返回 None，好让调用者知道传入的参数发生了变动，而且并未产生新的对象
