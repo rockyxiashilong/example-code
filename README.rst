@@ -1,18 +1,4 @@
 Fluent Python: example code
-===========================
-
-Example code for the book `Fluent Python`_ by Luciano Ramalho (O'Reilly, 2014).
-
-   **BEWARE**: This is a work in progress, like the book itself.
-
-* Code here may change and disappear without warning. 
-
-* If a piece of code is not yet in the ebook, it's likely to be broken.
-
-* A major reorganization may happen when the last chapter is done. 
-
-* No promises. No guarantees. Use at own risk.
-
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do 
 
 
@@ -79,4 +65,14 @@ Example code for the book `Fluent Python`_ by Luciano Ramalho (O'Reilly, 2014).
    >>> d = {1:'A'} 
    >>> d_proxy = MappingProxyType(d) 
    >>> d_proxy mappingproxy({1: 'A'}
+   
+14.set对象可以理解为去重的可迭代对象，可以直接字面值初始化、也可以用一个可以迭代的对象进行初始化。
+    >>> a = {1,2,3,4}
+    >>> a
+    set([1, 2, 3, 4])
+    >>> b = set([1,2,3,4,5,1,2,3])
+    >>> b
+    set([1, 2, 3, 4, 5])
+
+
 
