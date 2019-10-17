@@ -89,4 +89,5 @@ Fluent Python: example code
 2.匿名函数 lambda，不好阅读的lambda不建议使用，只是语法糖，完全可以用def函数来处理
 
 3.callable()    一般而言，实例不是可调用对象，除非其实现了__call__方法。
+4.函数也是对象，比普通对象多一些属性   __defaults__(返回参数的默认值) __code__   __name__函数名，注意，装饰器会破坏函数的上述对应信息
 
