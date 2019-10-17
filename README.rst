@@ -80,6 +80,13 @@ Fluent Python: example code
 第四章 文本和字节序列
     ---人类使用文本，计算机使用字节序列
 
+16 bytes  array.arrary struct     utf-8 utf-16 编码格式和解码格式需要保持一致，其中windows中文的默认编码格式是产cp1252，unix编码格式utf-8，windows读写文件时，最好指定编码集，防止出现乱码。 
 
+第五章
 
+1.map filter 高阶函数都有替代方案，可以用列表生成式来替代；高阶函数是指参数可以为函数对象或者返回值为函数对象的函数
+
+2.匿名函数 lambda，不好阅读的lambda不建议使用，只是语法糖，完全可以用def函数来处理
+
+3.callable()    一般而言，实例不是可调用对象，除非其实现了__call__方法。
 
