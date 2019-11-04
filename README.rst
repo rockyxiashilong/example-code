@@ -2,6 +2,29 @@ Fluent Python: example code
 .. _Fluent Python: http://shop.oreilly.com/product/0636920032519.do 
 
 
+ 1.从upstream（远程仓库） fork 一个个人仓库     例如：https://github.com/rockyxiashilong/WeEvent.git
+ 
+ 2.本地 git clone https://github.com/rockyxiashilong/WeEvent.git  
+        $ git remote -v      //克隆成功后，查看远程仓库，看到如下个人仓库
+        origin  https://github.com/rockyxiashilong/WeEvent.git (fetch)
+        origin  https://github.com/rockyxiashilong/WeEvent.git (push)
+
+ 
+ 3.添加远程仓库  git remote add upstream https://github.com/WeBankFinTech/WeEvent.git
+    $ git remote -v 
+    origin  https://github.com/rockyxiashilong/WeEvent.git (fetch)
+    origin  https://github.com/rockyxiashilong/WeEvent.git (push)
+    upstream        https://github.com/WeBankFinTech/WeEvent.git (fetch)
+    upstream        https://github.com/WeBankFinTech/WeEvent.git (push)
+    
+4.更新远程仓库  git fetch upstream 
+5.然后合入本地master     git rebase
+    git log -3 查看最新三次提交，看看本地仓库是不是已经是最新的代码了
+6.创建分支   git checkout -b add_testcase
+
+7.修改代码后，提交本地分支到个人远程仓，然后提交pr请求合入主仓库
+git push --set-upstream origin add_testcase 
+
 学习笔记
 第1-2章
 1.一致性的感念理解：python中的一切都是对象，对象的基类是object，提供了一些包含类似__len__de 用法，当用户调用len(obj)时，其实调用的是obj.__len_()方法
